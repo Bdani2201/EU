@@ -55,6 +55,18 @@ namespace eu
             if (i < adatokszama) van = true;
             if (van) Console.WriteLine("5. feladat: Magyarország csatlakozásának dátuma: {0:yyyy.MM.dd}", adatok[i].Datum);
             
+             //6.	 
+            van = false;
+            i = 0;
+            do
+            {
+                if (adatok[i].Datum.Month == 5) van = true;
+                i++;
+            }
+            while (i < adatokszama && !van);
+            if (van) Console.WriteLine("6. feladat: Májusban volt csatlakozás!");
+            else Console.WriteLine("6. feladat: Májusban nem volt csatlakozás!");
+            
             Console.ReadKey();
 
 
