@@ -67,6 +67,19 @@ namespace eu
             if (van) Console.WriteLine("6. feladat: Májusban volt csatlakozás!");
             else Console.WriteLine("6. feladat: Májusban nem volt csatlakozás!");
             
+            //7. 
+            DateTime max = adatok[0].Datum;
+            int maxi = 0;
+            for (i = 0; i < adatokszama; i++)
+                if(adatok[i].Datum>max)
+                {
+                    max = adatok[i].Datum;
+                    maxi = i;
+                }
+            Console.WriteLine("7. feladat: Legutoljára csatlakozott ország: {0}",adatok[maxi].Orszag);
+
+            
+            
             Console.ReadKey();
 
 
