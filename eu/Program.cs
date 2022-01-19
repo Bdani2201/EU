@@ -43,7 +43,17 @@ namespace eu
                 if (adatok[i].Datum.Year == 2007)
                     db++;
             Console.WriteLine("4. feladat: 2007-ben {0} ország csatlakozott.", db);
-
+            
+            //5.	
+            bool van = false;
+            i = 0;
+            do
+            {
+                i++;
+            }
+            while (adatok[i].Orszag != "Magyarország");
+            if (i < adatokszama) van = true;
+            if (van) Console.WriteLine("5. feladat: Magyarország csatlakozásának dátuma: {0:yyyy.MM.dd}", adatok[i].Datum);
             
             Console.ReadKey();
 
