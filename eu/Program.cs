@@ -20,5 +20,27 @@ namespace eu
         public string Orszag { get; set; }
         public DateTime Datum { get; set; }
     }
+    class Program
+    {
+        public static List<Unioallamai> adatok = new List<Unioallamai>();
+        static void Main(string[] args)
+        {
+            StreamReader olvas = new StreamReader("EUcsatlakozas.txt", Encoding.UTF8);
+            
+            while (!olvas.EndOfStream)
+            {
+                adatok.Add(new Unioallamai(olvas.ReadLine()));
+            }
+            int i, j;
+            int adatokszama = adatok.Count;
+            
+            //3.
+            Console.WriteLine("3. feladat: EU tagállamainak száma: {0} db",adatokszama);
+
+            
+            Console.ReadKey();
+
+
+        }
+    }
 }
-    
