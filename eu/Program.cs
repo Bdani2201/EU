@@ -77,8 +77,11 @@ namespace eu
                     maxi = i;
                 }
             Console.WriteLine("7. feladat: Legutoljára csatlakozott ország: {0}",adatok[maxi].Orszag);
-
             
+            //8.	
+            Console.WriteLine("8. feladat: Statisztika");
+            adatok.GroupBy(x => x.Datum.Year).ToList().ForEach(x => Console.WriteLine("\t{0} - {1} ország", x.Key, x.Count()));
+
             
             Console.ReadKey();
 
