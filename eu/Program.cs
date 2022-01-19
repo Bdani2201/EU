@@ -36,6 +36,13 @@ namespace eu
             
             //3.
             Console.WriteLine("3. feladat: EU tagállamainak száma: {0} db",adatokszama);
+            
+            //4.	
+            int db = 0;
+            for (i = 0; i < adatokszama; i++)
+                if (adatok[i].Datum.Year == 2007)
+                    db++;
+            Console.WriteLine("4. feladat: 2007-ben {0} ország csatlakozott.", db);
 
             
             Console.ReadKey();
